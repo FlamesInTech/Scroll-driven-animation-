@@ -1,0 +1,53 @@
+html {
+    scroll-timeline: --page-scroll block;
+  }
+.cover {
+    display: flex;
+    font-family: "Roboto";
+}
+
+.first-bracket {
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.last-bracket{
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.first-bracket,
+.letter-B,
+.last-bracket {
+    font-size: 200px;
+}
+
+.logo-content {
+    text-align: bottom;
+    animation: translateForward auto linear;
+    transform-origin: 0 50%;
+    animation-timeline: --page-scroll;
+}
+
+.last-bracket {
+    font-size: 200px;
+    animation: translateBackward auto linear;
+    animation-timeline: --page-scroll;
+}
+
+@keyframes translateForward {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(150px);
+    }
+}
+
+@keyframes translateBackward {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-150px);
+    }
+}
