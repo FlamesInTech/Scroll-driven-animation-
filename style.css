@@ -23,15 +23,19 @@ html {
 
 .logo-content {
     text-align: bottom;
-    animation: translateForward auto linear;
+    animation: translateBackward auto linear;
     transform-origin: 0 50%;
     animation-timeline: --page-scroll;
+    animation-range-start: 0%;
+    animation-range-end: 30%;
 }
 
 .last-bracket {
     font-size: 200px;
-    animation: translateBackward auto linear;
+    animation: translateForward auto linear;
     animation-timeline: --page-scroll;
+    animation-range-start: 0%;
+    animation-range-end: 30%;
 }
 
 @keyframes translateForward {
@@ -39,7 +43,7 @@ html {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(150px);
+        transform: translateX(200px);
     }
 }
 
@@ -48,6 +52,6 @@ html {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-150px);
+        transform: translateX(-200px);
     }
 }
