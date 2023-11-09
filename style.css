@@ -1,18 +1,10 @@
 html {
     scroll-timeline: --page-scroll block;
-  }
+}
+
 .cover {
     display: flex;
     font-family: "Roboto";
-}
-
-.first-bracket {
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-.last-bracket{
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .first-bracket,
@@ -53,5 +45,96 @@ html {
     }
     100% {
         transform: translateX(-200px);
+    }
+}
+
+/* Media Queries for Tablets */
+@media only screen and (max-width: 768px) {
+    .first-bracket,
+    .letter-B,
+    .last-bracket {
+        font-size: 150px;
+        font-size: 3em;
+
+    }
+
+    .logo-content {
+        animation: translateBackward auto linear;
+        transform-origin: 0 50%;
+        animation-timeline: --page-scroll;
+        animation-range-start: 0%;
+        animation-range-end: 30%;
+    }
+
+    .last-bracket {
+        font-size: 150px;
+        animation: translateForward auto linear;
+        animation-timeline: --page-scroll;
+        animation-range-start: 0%;
+        animation-range-end: 30%;
+    }
+    @keyframes translateForward {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(60px);
+        }
+    }
+    
+    @keyframes translateBackward {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-60px);
+        }
+    }
+}
+
+/* Media Queries for Mobile */
+@media only screen and (max-width: 480px) {
+    .first-bracket img,
+    .letter-B img,
+    .last-bracket img,
+    .logo-content img{
+        font-size: 100px;
+        font-size: 3em;
+        height: 100px;
+    }
+    
+
+    .logo-content {
+        animation: translateBackward auto linear;
+        transform-origin: 0 50%;
+        animation-timeline: --page-scroll;
+        animation-range-start: 0%;
+        animation-range-end: 30%;
+    }
+
+    .last-bracket {
+        font-size: 100px;
+        animation: translateForward auto linear;
+        animation-timeline: --page-scroll;
+        animation-range-start: 0%;
+        animation-range-end: 30%;
+    }
+
+    @keyframes translateForward {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(60px);
+        }
+    }
+    
+    @keyframes translateBackward {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-60px);
+        }
     }
 }
